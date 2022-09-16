@@ -1,0 +1,7 @@
+{
+  "Database": {
+    "Connect": {
+      "URL": "Data Source=.;Initial Catalog=Consent-local;Integrated Security=True"
+    }
+  }
+}
