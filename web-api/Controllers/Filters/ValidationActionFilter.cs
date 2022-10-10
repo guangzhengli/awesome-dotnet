@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace Awesome_dotnet_application.Controllers.Filters;
+namespace Awesome_dotnet.Controllers.Filters;
 
 public class ValidationActionFilter : IActionFilter
 {

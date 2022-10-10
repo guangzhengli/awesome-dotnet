@@ -1,6 +1,10 @@
-namespace Awesome_dotnet_application;
+using ISession = NHibernate.ISession;
 
-public class OrderRepository
+namespace Awesome_dotnet.Repositories;
+
+public class OrderRepository : EntityStorage
 {
-    
+    public OrderRepository(ISession session) : base(session)
+    {
+    }
 }

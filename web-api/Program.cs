@@ -1,8 +1,8 @@
 
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using Awesome_dotnet_application;
-using Awesome_dotnet_application.configuration;
+using Awesome_dotnet;
+using Awesome_dotnet.Configuration;
 using NLog.Web;
 
 var logger = NLogBuilder.ConfigureNLog("NLog.config").GetCurrentClassLogger();

@@ -1,4 +1,4 @@
-namespace Awesome_dotnet_application.configuration;
+namespace Awesome_dotnet.Configuration;
 
 public class AppConfiguration : IAppConfiguration
 {

@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
-using Awesome_dotnet_application.Model;
+using Awesome_dotnet.Model;
 
-namespace Awesome_dotnet_application.Controllers.Request;
+namespace Awesome_dotnet.Controllers.Request;
 
 public class CreateOrderRequest
 {

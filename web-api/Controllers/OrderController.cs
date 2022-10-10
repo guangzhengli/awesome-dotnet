@@ -1,7 +1,7 @@
-using Awesome_dotnet_application.Controllers.Request;
+using Awesome_dotnet.Controllers.Request;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Awesome_dotnet_application.Controllers;
+namespace Awesome_dotnet.Controllers;
 
 [ApiController]
 [Route("/orders")]

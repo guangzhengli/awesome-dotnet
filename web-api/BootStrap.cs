@@ -1,8 +1,8 @@
 using System.Reflection;
 using Autofac;
-using Awesome_dotnet_application.Controllers.Filters;
+using Awesome_dotnet.Controllers.Filters;
 
-namespace Awesome_dotnet_application;
+namespace Awesome_dotnet;
 
 public static class BootStrap
 {

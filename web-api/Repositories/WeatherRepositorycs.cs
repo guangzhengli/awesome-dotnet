@@ -1,6 +1,6 @@
-using Awesome_dotnet_application.configuration;
+using Awesome_dotnet.Configuration;
 
-namespace Awesome_dotnet_application;
+namespace Awesome_dotnet.Repositories;
 
 public class WeatherRepository
 {

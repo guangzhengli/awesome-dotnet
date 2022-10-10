@@ -1,4 +1,4 @@
-namespace Awesome_dotnet_application.Model;
+namespace Awesome_dotnet.Model;
 
 public enum OrderStatus
 {

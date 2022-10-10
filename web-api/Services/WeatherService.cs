@@ -1,4 +1,6 @@
-namespace Awesome_dotnet_application;
+using Awesome_dotnet.Repositories;
+
+namespace Awesome_dotnet.Services;
 
 public class WeatherService
 {
