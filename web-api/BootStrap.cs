@@ -21,5 +21,12 @@ public static class BootStrap
         
         builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
             .Where(t => t.Name.EndsWith("Service")).SingleInstance();
+        
+        
+    }
+
+    private static void ConfigureDatabase(ContainerBuilder builder)
+    {
+        builder.RegisterModule();
     }
 }

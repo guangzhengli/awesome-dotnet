@@ -1,7 +1,7 @@
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Automapping.Alterations;
 
-namespace Awesome_dotnet.Model;
+namespace Awesome_dotnet.Models;
 
 public class Order : BaseEntity
 {
