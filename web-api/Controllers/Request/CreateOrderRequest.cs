@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-using Awesome_dotnet.Model;
+using Awesome_dotnet.Models;
 
 namespace Awesome_dotnet.Controllers.Request;
 

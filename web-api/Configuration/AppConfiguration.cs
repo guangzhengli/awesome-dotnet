@@ -7,7 +7,10 @@ public class AppConfiguration : IAppConfiguration
     public AppConfiguration(IConfiguration configuration)
     {
         _configuration = configuration;
+        StaticConfig = configuration;
     }
 
     public string DBConnectionString => _configuration["Database:Connect:URL"];
+    
+    public static IConfiguration StaticConfig { get; private set; }
 }
