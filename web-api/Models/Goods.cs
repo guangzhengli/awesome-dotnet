@@ -16,7 +16,7 @@ public class GoodsMapping : IAutoMappingOverride<Goods>
     {
         mapping.Table("goods");
         mapping.Id(g => g.Id);
-        mapping.Map(g => g.Name);
-        mapping.Map(g => g.Desc);
+        mapping.Map(g => g.Name).Column("name");
+        mapping.Map(g => g.Desc).Column("desc");
     }
 }

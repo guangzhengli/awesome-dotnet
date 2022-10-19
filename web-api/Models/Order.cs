@@ -17,9 +17,9 @@ public class OrderMapping : IAutoMappingOverride<Order>
     {
         mapping.Table("order");
         mapping.Id(o => o.Id);
-        mapping.References(o => o.Goods).Cascade.All();
-        mapping.Map(o => o.Status);
-        mapping.Map(o => o.UserName);
-        mapping.Map(o => o.Desc);
+        mapping.References(o => o.Goods).Column("goods_id").Cascade.All();
+        mapping.Map(o => o.Status).Column("status");
+        mapping.Map(o => o.UserName).Column("username");
+        mapping.Map(o => o.Desc).Column("desc");
     }
 }
