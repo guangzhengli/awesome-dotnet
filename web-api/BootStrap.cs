@@ -1,9 +1,12 @@
 using System.Reflection;
 using Autofac;
-using Awesome_dotnet.Configuration;
 using Awesome_dotnet.Controllers.Filters;
+using Awesome_dotnet.Models;
+using Awesome_dotnet.Repositories;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
+using NHibernate;
+using ISession = NHibernate.ISession;
 
 namespace Awesome_dotnet;
 
@@ -24,12 +27,24 @@ public static class BootStrap
         
         builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
             .Where(t => t.Name.EndsWith("Service")).SingleInstance();
+        
+        builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
+            .Where(t => t.Name.EndsWith("Controller")).SingleInstance();
 
         ConfigureDatabase(builder);
     }
 
     private static void ConfigureDatabase(ContainerBuilder builder)
     {
+        builder.Register(c =>
+        {
+            var session = c.Resolve<ISessionFactory>().OpenSession();
+            session.FlushMode = FlushMode.Auto;
+            return session;
+        }).As<ISession>().InstancePerLifetimeScope();
+        
+        builder.RegisterType<EntityStorage>().InstancePerLifetimeScope();
+        
         builder.Register(_ =>
         {
             // var connectString = AppConfiguration.StaticConfig["Database:Connect:URL"];

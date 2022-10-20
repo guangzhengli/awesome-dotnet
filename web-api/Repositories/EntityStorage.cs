@@ -13,10 +13,16 @@ namespace Awesome_dotnet.Repositories
         {
             this.session = session;
         }
-
+        
         public void Save(object entity)
         {
-            session.SaveOrUpdate(entity);
+            session.Save(entity);
+            session.Flush();
+        }
+
+        public void Update(object entity)
+        {
+            session.Update(entity);
             session.Flush();
         }
 

@@ -1,22 +1,22 @@
-using FluentNHibernate.Automapping;
-using FluentNHibernate.Automapping.Alterations;
+using FluentNHibernate.Mapping;
 
 namespace Awesome_dotnet.Models;
 
-public class Goods : BaseEntity
+public class Goods
 {
+    public virtual int Id { get; set; }
     public virtual string Name { get; set; }
     
     public virtual string Desc { get; set; }
 }
 
-public class GoodsMapping : IAutoMappingOverride<Goods>
+public class GoodsMapping : ClassMap<Goods>
 {
-    public void Override(AutoMapping<Goods> mapping)
+    public GoodsMapping()
     {
-        mapping.Table("goods");
-        mapping.Id(g => g.Id);
-        mapping.Map(g => g.Name).Column("name");
-        mapping.Map(g => g.Desc).Column("desc");
+        Table("goods");
+        Id(g => g.Id).Column("id");
+        Map(g => g.Name).Column("name");
+        Map(g => g.Desc).Column("desc");
     }
 }
