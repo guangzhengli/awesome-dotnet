@@ -9,7 +9,7 @@ namespace database_migration
         public override void Up()
         {
             Create.Table("order")
-                .WithColumn("Id").AsGuid().PrimaryKey().Identity()
+                .WithColumn("id").AsInt64().PrimaryKey().Identity()
                 .WithColumn("goods_id").AsGuid()
                 .WithColumn("status").AsString()
                 .WithColumn("username").AsString()
