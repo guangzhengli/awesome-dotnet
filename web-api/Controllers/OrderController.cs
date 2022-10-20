@@ -1,4 +1,6 @@
 using Awesome_dotnet.Controllers.Request;
+using Awesome_dotnet.Models;
+using Awesome_dotnet.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Awesome_dotnet.Controllers;
@@ -8,17 +10,29 @@ namespace Awesome_dotnet.Controllers;
 public class OrderController : ControllerBase
 {
     private readonly ILogger<OrderController> _logger;
+    private readonly OrderService _orderService;
+    private readonly GoodsService _goodsService;
 
-    public OrderController(ILogger<OrderController> logger)
+    public OrderController(ILogger<OrderController> logger, OrderService orderService, GoodsService goodsService)
     {
         _logger = logger;
+        _orderService = orderService;
+        _goodsService = goodsService;
     }
 
-    [HttpPost("/create")]
+    [HttpPost]
     public IActionResult CreateOrder(CreateOrderRequest request)
     {
-        _logger.LogInformation("request CreateOrder");
-        _logger.LogInformation($"request is: {request}");
-        return Ok("success");
+        var goods = _goodsService.GetGoods(request.GoodsId);
+        var order = new Order
+        {
+            Goods = goods,
+            Status = OrderStatus.Created,
+            UserName = request.UserName,
+            Desc = request.Desc
+        };
+        _orderService.CreateOrder(order);
+        return Ok();
     }
+    
 }
