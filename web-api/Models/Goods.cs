@@ -7,7 +7,7 @@ public class Goods
     public virtual int Id { get; set; }
     public virtual string Name { get; set; }
     
-    public virtual string Desc { get; set; }
+    public virtual string Description { get; set; }
 }
 
 public class GoodsMapping : ClassMap<Goods>
@@ -17,6 +17,6 @@ public class GoodsMapping : ClassMap<Goods>
         Table("goods");
         Id(g => g.Id).Column("id");
         Map(g => g.Name).Column("name");
-        Map(g => g.Desc).Column("desc");
+        Map(g => g.Description).Column("description");
     }
 }

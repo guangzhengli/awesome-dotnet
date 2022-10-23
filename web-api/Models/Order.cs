@@ -8,7 +8,7 @@ public class Order
     public virtual Goods Goods { get; set; }
     public virtual OrderStatus Status { get; set; }
     public virtual string UserName { get; set; }
-    public virtual string Desc { get; set; }
+    public virtual string Description { get; set; }
 }
 
 public class OrderMapping : ClassMap<Order>
@@ -20,6 +20,6 @@ public class OrderMapping : ClassMap<Order>
         References(o => o.Goods).Column("goods_id").Cascade.All();
         Map(o => o.Status).Column("status");
         Map(o => o.UserName).Column("username");
-        Map(o => o.Desc).Column("desc");
+        Map(o => o.Description).Column("description");
     }
 }

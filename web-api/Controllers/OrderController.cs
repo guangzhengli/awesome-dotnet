@@ -29,7 +29,7 @@ public class OrderController : ControllerBase
             Goods = goods,
             Status = OrderStatus.Created,
             UserName = request.UserName,
-            Desc = request.Desc
+            Description = request.Desc
         };
         _orderService.CreateOrder(order);
         return Ok();

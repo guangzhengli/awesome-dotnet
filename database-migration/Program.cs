@@ -20,11 +20,13 @@ namespace database_migration
             return new ServiceCollection()
                 .AddFluentMigratorCore()
                 .ConfigureRunner(rb => rb
-                    .AddPostgres()
-                    .WithGlobalConnectionString("Server=127.0.0.1;Port=5432;Database=awesome_dotnet;User Id=postgres;Password=postgrepassword;")
+                    .AddSqlServer()
+                    .WithGlobalConnectionString("local")
                     .ScanIn(typeof(Program).Assembly).For.Migrations())
                 .AddLogging(lb => lb.AddFluentMigratorConsole())
                 .BuildServiceProvider(false);
+            // .AddPostgres()
+            // .WithGlobalConnectionString("Server=127.0.0.1;Port=5432;Database=awesome_dotnet;User Id=postgres;Password=postgrepassword;")
         }
         
         private static void UpdateDatabase(IServiceProvider serviceProvider)

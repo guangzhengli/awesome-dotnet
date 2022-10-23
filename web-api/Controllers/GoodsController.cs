@@ -24,7 +24,7 @@ public class GoodsController : ControllerBase
         var goods = new Goods
         {
             Name = request.Name,
-            Desc = request.Desc
+            Description = request.Desc
         };
         _goodsService.CreateGoods(goods);
         return Ok();
