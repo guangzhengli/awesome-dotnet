@@ -13,7 +13,7 @@ namespace database_migration
                 .WithColumn("goods_id").AsGuid()
                 .WithColumn("status").AsString()
                 .WithColumn("username").AsString()
-                .WithColumn("desc").AsString();
+                .WithColumn("description").AsString();
         }
 
         public override void Down()

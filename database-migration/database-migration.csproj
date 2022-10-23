@@ -9,9 +9,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.2.2" />
       <PackageReference Include="FluentMigrator" Version="3.3.2" />
       <PackageReference Include="FluentMigrator.Runner" Version="3.3.2" />
-      <PackageReference Include="Npgsql" Version="6.0.7" />
     </ItemGroup>
 
 </Project>

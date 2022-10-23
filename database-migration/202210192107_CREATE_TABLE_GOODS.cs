@@ -11,7 +11,7 @@ namespace database_migration
             Create.Table("goods")
                 .WithColumn("id").AsInt64().PrimaryKey().Identity()
                 .WithColumn("name").AsString()
-                .WithColumn("desc").AsString();
+                .WithColumn("description").AsString();
         }
 
         public override void Down()
