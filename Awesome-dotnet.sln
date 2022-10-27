@@ -4,6 +4,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web-api", "web-api\web-api.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "database-migration", "database-migration\database-migration.csproj", "{34E13D38-CB75-4E06-8F62-8EEA88939336}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C8C49A59-3282-4598-AC4D-B9164AD2FC9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CE0409AA-411E-48FE-9050-790CDB05C54E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web-api-test", "web-api-test\web-api-test.csproj", "{4A7F2C5F-EAC8-4A8A-937F-C0CF1E75FA18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +24,14 @@ Global
 		{34E13D38-CB75-4E06-8F62-8EEA88939336}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34E13D38-CB75-4E06-8F62-8EEA88939336}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34E13D38-CB75-4E06-8F62-8EEA88939336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A7F2C5F-EAC8-4A8A-937F-C0CF1E75FA18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A7F2C5F-EAC8-4A8A-937F-C0CF1E75FA18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A7F2C5F-EAC8-4A8A-937F-C0CF1E75FA18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A7F2C5F-EAC8-4A8A-937F-C0CF1E75FA18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{34E13D38-CB75-4E06-8F62-8EEA88939336} = {C8C49A59-3282-4598-AC4D-B9164AD2FC9B}
+		{866D0953-0120-4F78-9DD2-FDFA987A04D7} = {C8C49A59-3282-4598-AC4D-B9164AD2FC9B}
+		{4A7F2C5F-EAC8-4A8A-937F-C0CF1E75FA18} = {CE0409AA-411E-48FE-9050-790CDB05C54E}
 	EndGlobalSection
 EndGlobal
