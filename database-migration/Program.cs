@@ -8,11 +8,9 @@ namespace database_migration
         static void Main(string[] args)
         {
             var serviceProvider = CreateServices();
-            
-            using (var scope = serviceProvider.CreateScope())
-            {
-                UpdateDatabase(scope.ServiceProvider);
-            }
+
+            using var scope = serviceProvider.CreateScope();
+            UpdateDatabase(scope.ServiceProvider);
         }
         
         private static IServiceProvider CreateServices()
